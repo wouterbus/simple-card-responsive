@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container {
+    max-width: 600px;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container .image img {
+    width: 300px;
+    height: 100%;
+}
+
+.desktop-img {
+    display: block;
+}
+
+.mobile-img {
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+h1{
+    font-family: 'Fraunces';
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: "Fraunces", serif;
+    color: hsl(158, 36%, 37%);
+}
+
+small {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+p, small {
+    color: hsl(228, 12%, 48%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.prices h3 {
+    text-decoration-line:line-through;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+@media (max-width:768px) {
+    body {
+        height: inherit;
+    }
+    .container {
+        flex-direction: column;
+        margin: 40px 20px;
+    }
+    .content {
+        min-height: 260px; 
+        gap: 20px;
+    }
+    .desktop-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+    }
+
+    .container .image img {
+        width: 100%;
+    }
+
+} 
